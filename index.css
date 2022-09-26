@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+html {
+	background-color: black;
+	padding: 10px;
+}
+
 .list {
 	list-style-type: none;
 }
@@ -33,5 +38,79 @@
 	height: 200px;
 	visibility: visible;
 	transition: .2s ease-in-out;
-} 
+}
 
+.hamb-menu {
+	position: relative;
+	z-index: 2;
+}
+
+.hamb-button {
+	position: relative;
+	margin-top: 8rem;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: unset;
+	border: 0;
+}
+
+.hamb-button__line {
+	height: 4px;
+	width: 40px;
+	background-color: orange;
+}
+
+.line {
+	transition: 0.3s ease;
+}
+
+.hamb-menu--openned .line--top {
+	transform: translateY(14px) rotateZ(-45deg);
+}
+
+.hamb-menu--openned .line--bot {
+	transform: translateY(-12px) rotateZ(45deg);
+}
+
+.hamb-menu--openned .line--mid {
+	opacity: 0;
+}
+
+.hamb-menu--openned .hamb-button__line{
+	background-color: white;
+}
+
+.hamb-list {
+	visibility: hidden;
+	margin-top: 40px;
+	color: white;
+	font-size: 32px;
+}
+
+.hamb-menu--openned .hamb-list {
+	visibility: visible;
+}
+
+.menu-bg {
+	position: absolute;
+	top: 180px;
+	display: block;
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+	margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, orange, orange);
+	border-radius: 50%;
+	z-index: 1;
+	transition: 0.3s ease;
+}
+
+.menu-bg--openned {
+	visibility: visible;
+	width: 420px;
+	transform: translate(-60%,-15%);
+  height: 390px;
+}

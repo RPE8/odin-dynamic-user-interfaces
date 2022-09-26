@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: black">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./index.css">
-	<script src="./index.js"></script>
+	<script src="./index.js" defer></script>
 	<title>Document</title>
 </head>
 <body>
@@ -23,6 +23,20 @@
 				<li class="dropdown-list__item item">Button 3</li>
 			</ul>
 		</nav>
+		<div class="hamb-menu hamb-menu">
+			<button class="hamb-menu__hamb-button hamb-button">
+				<span class="hamb-button__line line line--top"></span>
+				<span class="hamb-button__line line line--mid"></span>
+				<span class="hamb-button__line line line--bot"></span>
+			</button>
+			<menu class="hamb-menu__hamb-list hamb-list list">
+				<li class="hamb-list__hamb-item hamb-item">Item 1</li>
+				<li class="hamb-list__hamb-item hamb-item">Item 2</li>
+				<li class="hamb-list__hamb-item hamb-item">Item 3</li>
+				<li class="hamb-list__hamb-item hamb-item">Item 4</li>
+			</menu>
+		</div>
+		<div class="menu-bg menu-bg"></div>
 	</header>
 </body>
 </html>
