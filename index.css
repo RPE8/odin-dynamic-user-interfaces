@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.list {
+	list-style-type: none;
+}
+
+.dropdown-list {
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+}
+
+.item {
+	background-color: pink;
+	padding: 1rem;
+}
+
+.sublist {
+	position: absolute;
+	width: auto;
+	height: 0px;
+	visibility: hidden; 
+	transition: .2s ease-in-out;
+	overflow: hidden;
+}
+
+.item--dropdown:hover .sublist{
+	/* transform: translateY(0); */
+	height: 200px;
+	visibility: visible;
+	transition: .2s ease-in-out;
+} 
+
